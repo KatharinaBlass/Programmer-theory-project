@@ -9,6 +9,7 @@ public abstract class Animal : MonoBehaviour
     [SerializeField] private float jumpForce = 10.0f;
     Rigidbody AnimalRb;
     protected Animator animator;
+    // ENCAPSULATION
     private string _Name = "Animal";
     public string AnimalName
     {
@@ -49,12 +50,12 @@ public abstract class Animal : MonoBehaviour
         }
 
     }
-
+    // ABSTRACTION
     public virtual void Jump()
     {
         AnimalRb.AddForce(Vector3.up * jumpForce);
     }
-
+    // ABSTRACTION
     public virtual void PresentSelf()
     {
         Debug.Log("Hello! My Name is " + _Name);
